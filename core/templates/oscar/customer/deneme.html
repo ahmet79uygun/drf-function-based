@@ -1,0 +1,24 @@
+
+
+  <form id="login_form" action="{% url 'login' %}" method="post" class="card card-body bg-light" >
+      {% csrf_token %}
+      <label for="id_username">Username:</label>
+      <input type="text" name="username" id="id_username" required>
+      <label for="id_password">Password:</label>
+      <input type="password" name="password" id="id_password" required>
+      <button name="login_submit" type="submit" value="Log In" class="btn btn-lg btn-primary">Giriş</button>
+  </form>
+
+
+
+
+  <form id="register_form" action="{% url 'register' %}" method="post" class="card card-body bg-light">
+    {% csrf_token %}
+    <label for="id_username">Username:</label>
+    <input type="text" name="username" id="id_username" required>
+    <label for="id_password">Password:</label>
+    <input type="password" name="password" id="id_password" required>
+    <button name="register_submit" type="submit" value="Register" class="btn btn-lg btn-primary">
+      Register
+    </button>
+  </form>
